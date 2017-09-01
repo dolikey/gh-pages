@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "6"
+before_script:
+  - npm install hexo-cli -g
+  - 
+script:
+  - hexo generate
+deploy:
+  provider: pages
+  local_dir: public
+  repo: dolikey/dolikey.github.io
+  skip_cleanup: true
+  github_token: $GIT
+  on:
+    branch: source
+  target_branch: master
