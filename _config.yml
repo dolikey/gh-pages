@@ -82,8 +82,8 @@ keywords:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git  # 这里是发布的方式
-  repo: https://github.com/dolikey/dolikey.github.io.git # 发布的仓库地址
-  branch: master # 发布的分支
+  repo: https://github.com/dolikey/gh-pages.git # 发布的仓库地址
+  branch: gh-pages # 发布的分支
   # message: [message] # 提交信息
   name: dolikey # git用户名
   email: dugw942@nenu.edu.cn # git帐号的邮箱

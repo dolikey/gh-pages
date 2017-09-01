@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="愿世界和平">
+    <title>yarn介绍 - 愿世界和平</title>
+    <meta name="author" content="arone">
+    
+        <meta name="keywords" content="hexo,javascript,">
+    
+    
+    
+    <meta name="description" content="yarn - https://github.com/yarnpkg/yarn  ##一、为什么需要yarn   作为一个前端，说到包管理首先想到的可能是node里的npm。至今为止，它可以访问在npm注册的 300,000 多个安装包。超出500万的工程师使用npm注册，每个月的下载量高达 50 亿。但是随着npm的普遍过程中，有一些问题也随之暴露出来：  当跨机器或用户安装依赖时，拉取依赖包消">
+<meta name="keywords" content="yarn,test1,test2">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="yarn介绍">
+<meta property="og:url" content="http://arone.me/2017/08/31/yarn/index.html">
+<meta property="og:site_name" content="愿世界和平">
+<meta property="og:description" content="yarn - https://github.com/yarnpkg/yarn  ##一、为什么需要yarn   作为一个前端，说到包管理首先想到的可能是node里的npm。至今为止，它可以访问在npm注册的 300,000 多个安装包。超出500万的工程师使用npm注册，每个月的下载量高达 50 亿。但是随着npm的普遍过程中，有一些问题也随之暴露出来：  当跨机器或用户安装依赖时，拉取依赖包消">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-08-31T10:49:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yarn介绍">
+<meta name="twitter:description" content="yarn - https://github.com/yarnpkg/yarn  ##一、为什么需要yarn   作为一个前端，说到包管理首先想到的可能是node里的npm。至今为止，它可以访问在npm注册的 300,000 多个安装包。超出500万的工程师使用npm注册，每个月的下载量高达 50 亿。但是随着npm的普遍过程中，有一些问题也随之暴露出来：  当跨机器或用户安装依赖时，拉取依赖包消">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://arone.me/assets/images/avatar.1.jpg"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">愿世界和平</a>
+    </div>
+    
+        
+            <a  class="header-right-icon open-algolia-search"
+                href="#search">
+        
+        
+            <i class="fa fa-lg fa-search"></i>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.1.jpg" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">arone</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            yarn介绍
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-08-31T15:47:28+08:00">
+	
+		    8月 31, 2017
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <blockquote>
+<p><a href="https://github.com/yarnpkg/yarn" target="_blank" rel="external">yarn</a> - <a href="https://github.com/yarnpkg/yarn" target="_blank" rel="external">https://github.com/yarnpkg/yarn</a></p>
+</blockquote>
+<p>##一、为什么需要yarn<br>   作为一个前端，说到包管理首先想到的可能是node里的npm。至今为止，它可以访问在npm注册的 300,000 多个安装包。超出500万的工程师使用npm注册，每个月的下载量高达 50 亿。<br>但是随着npm的普遍过程中，有一些问题也随之暴露出来：</p>
+<ol>
+<li>当跨机器或用户安装依赖时，拉取依赖包消耗的时间较长（依赖网络）。</li>
+<li>在版本管理没用锁定的情况下一个小升级就有可能导致项目出错。</li>
+<li>在协作开发时，npm安装依赖到  node_modules 目录时顺序不是固定的，不能保证不同终端中的开发环境一致。</li>
+<li>node_modules里的依赖有很多重复的，即占用了硬盘资源，又拉长了拉取的时间和网络资源。<br>所以yarn诞生了。</li>
+</ol>
+<p>##二、yarn简介<br>facebook于 2016-10-12 开源的javascript包管理工具 Yarn，开源三天star数就超过了npm。Yarn 作为一个新的包管理器，用于替代现有的 npm 客户端或者其他兼容 npm 仓库的包管理工具。Yarn 保留了现有工作流的特性，优点是更快、更安全、更可靠。</p>
+<blockquote>
+<p>新的特性：</p>
+<ol>
+<li>离线模式（Offline Mode）：如果你之前安装过某个包，那么你可以在没有互联网连接的情况下，对这个包进行重新安装。</li>
+<li>确定性（Deterministic）：不管安装顺序如何，相同的依赖在每台机器上会以完全相同的方式进行安装。</li>
+<li>网络性能：Yarn会对请求进行高效地排队，避免出现请求瀑布（waterfall），便于将网络的使用效率达到最大化。</li>
+<li>网络弹性（Network Resilience）：单个请求的失败不会导致整个安装的失败，请求会基于故障进行重试。</li>
+<li>扁平模式（Flat Mode）：将不匹配的依赖版本都会解析为同一个版本，避免重复创建。</li>
+</ol>
+</blockquote>
+<p>总结一下就是：兼容npm、缓存和离线下载、yarn.lock锁定版本与安装顺序</p>
+<p>##三、yarn的使用</p>
+<p>####安装<br><strong>macOS</strong><br>官方推荐的是homebrew：<figure class="highlight plain"><figcaption><span>install yarn```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">或者用npm也可以： ```npm install -g yarn</div></pre></td></tr></table></figure></p>
+<p><strong>windows</strong><br>下载.msi文件安装 ( <a href="https://yarnpkg.com/latest.msi" target="_blank" rel="external">下载传送门</a> )，不过需要先装个node ( <a href="https://nodejs.org/" target="_blank" rel="external">下载传送门</a> ).<br><strong>Linux</strong><br>apt-get: <figure class="highlight plain"><figcaption><span>apt-get update && sudo apt-get install yarn```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum: ```sudo yum install yarn</div></pre></td></tr></table></figure></p>
+<p>and so on…</p>
+<p>####简单指令<br>npm|yarn|注释<br>—-|—-|—-<br>npm init | yarn init |<br>npm install | yarn / yarn install |<br>npm install xxx —save | yarn add xxx |  yarn add [package]@[version]<br>npm uninstall xxx —save | yarn remove xxx |<br>npm update |  yarn upgrade | yarn upgrade [package]@[version]<br>npm install xxx -g | yarn global add xxx |</p>
+<p>####结尾<br>如果你只是想本地改一下依赖就用npm好了，yarn每次更改好像都会更改.lock文件。如果并不想锁定版本用npm也是一种可接受方案。</p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/yarn-test1-test2/">yarn,test1,test2</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/08/31/jshint/"  data-tooltip="jshint">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-weibo"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://arone.me/2017/08/31/yarn/&amp;title=yarn介绍">
+                    <i class="fa fa-qq"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-star"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 arone. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/08/31/jshint/"  data-tooltip="jshint">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-weibo"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://arone.me/2017/08/31/yarn/&amp;title=yarn介绍">
+                    <i class="fa fa-qq"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-star"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-weibo"></i><span>分享到 Weibo</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://arone.me/2017/08/31/yarn/&amp;title=yarn介绍">
+                    <i class="fa fa-qq"></i><span>分享到 QQ</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://arone.me/2017/08/31/yarn/">
+                    <i class="fa fa-star"></i><span>分享到 Qzone</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.1.jpg" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">arone</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                beijing
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://arone.me/2017/08/31/yarn/">
+                            <h3 class="media-heading">yarn介绍</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年8月31日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://arone.me/2017/08/31/jshint/">
+                            <h3 class="media-heading">jshint</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年8月31日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 2 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.fancybox.js"></script>
+<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
+<script src="/assets/js/tranquilpeak.js"></script>
+<!--SCRIPTS END-->
+
+    
+
+
+    </body>
+</html>

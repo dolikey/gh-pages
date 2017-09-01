@@ -5,7 +5,7 @@ before_script:
   - npm install hexo-cli -g
   - 
 script:
-  - hexo generate
+  - hexo g
 deploy:
   provider: pages
   local_dir: public
@@ -13,5 +13,5 @@ deploy:
   skip_cleanup: true
   github_token: $GIT
   on:
-    branch: source
-  target_branch: master
+    branch: master
+  target_branch: gh-pages
