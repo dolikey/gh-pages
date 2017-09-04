@@ -11,7 +11,7 @@ jshint  静态代码检测工具
 
 >参考地址：[http://jshint.com/docs/](http://jshint.com/docs/)
 
-##安装
+安装
 
 ```
 npm install jshint -g
@@ -22,7 +22,7 @@ npm install jshint -g
 * .jshintignore jshint不忽略检测的文件 ／ 或者用 --exclude-path命令指定一个.gitignore
 * reporter.js 自定义的jshint的输出方法，具体可参考本文的 [附件:reporter](#reporter)
 
-##使用
+使用
 ####ide拓展
 主流的ide都有自己的拓展插件，这里用vscode简单的说明。
 在vscode左侧的应用商店搜索jshint排第一个就是。配合项目中的.jshintrc文件可以在ide中报错。
