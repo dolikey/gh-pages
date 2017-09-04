@@ -4,7 +4,8 @@ node_js:
 before_script:
   - npm install hexo-cli -g
   - cd themes/tranquilpeak
-  - brow install
+  - yarn
+  - bower install
 script:
   - hexo g
   
