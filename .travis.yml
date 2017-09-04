@@ -9,7 +9,7 @@ before_script:
   - cd ../..
   -
 script:
-  - hexo generate
+  - hexo g
   
 deploy:
   provider: pages

@@ -1,7 +1,11 @@
 ---
 title: jshint
 date: 2017-08-31 18:43:24
+categories:
+- javascript
 tags:
+- js
+- jshint
 ---
 jshint  静态代码检测工具
 

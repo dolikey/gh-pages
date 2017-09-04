@@ -2,10 +2,12 @@
 title: yarn介绍
 date: 2017-08-31 15:47:28
 categories:
-- Diary
+- javascript
 tags:
-- PS3
-- Games
+- js
+- node
+- npm
+- yarn
 ---
 >[yarn](https://github.com/yarnpkg/yarn) - https://github.com/yarnpkg/yarn
 
