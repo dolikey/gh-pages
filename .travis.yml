@@ -6,8 +6,10 @@ before_script:
   - cd themes/tranquilpeak
   - yarn
   - bower install
+  - cd ../..
+  -
 script:
-  - hexo g
+  - hexo generate
   
 deploy:
   provider: pages
