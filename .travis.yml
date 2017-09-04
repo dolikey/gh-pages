@@ -14,7 +14,7 @@ script:
 deploy:
   provider: pages
   local_dir: public
-  repo: dolikey/dolikey.github.io
+  repo: dolikey/gh-pages.github.io
   skip_cleanup: true
   github_token: $GIT
   on:
