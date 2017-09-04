@@ -3,7 +3,8 @@ node_js:
   - "6"
 before_script:
   - npm install hexo-cli -g
-  - 
+  - cd cd themes/tranquilpeak
+  - brow install
 script:
   - hexo g
   
