@@ -88,3 +88,6 @@ deploy:
   name: dolikey # git用户名
   email: dugw942@nenu.edu.cn # git帐号的邮箱
   extend_dirs:  # 排除的文件夹
+
+
+disqus_shortname: arone-me
