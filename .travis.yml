@@ -4,8 +4,8 @@ node_js:
 before_script:
   - npm install hexo-cli -g
   - cd themes/tranquilpeak
-  - bower install
   - npm install
+  - bower install
   - cd ../..
   -
 script:
