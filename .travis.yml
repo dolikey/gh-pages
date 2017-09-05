@@ -4,12 +4,12 @@ node_js:
 before_script:
   - npm install hexo-cli -g
   - cd themes/tranquilpeak
-  - yarn
   - bower install
+  - npm install
   - cd ../..
   -
 script:
-  - hexo clean
+  - hexo -v
   - hexo g
   
 deploy:

@@ -75,8 +75,8 @@ pagination_dir: page
 theme: tranquilpeak
 
 keywords:
-- hexo
-- javascript
+ - hexo
+ - javascript
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
