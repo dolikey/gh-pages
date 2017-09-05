@@ -9,6 +9,7 @@ before_script:
   - cd ../..
   -
 script:
+  - hexo clean
   - hexo g
   
 deploy:
