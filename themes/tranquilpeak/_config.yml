@@ -141,7 +141,7 @@ author:
 # large sidebar is swiped on all lower screens
 # 5: Display header bar on all screens and large sidebar is swiped on large screen
 # 6: Display header bar on all screens and medium sidebar is swiped
-sidebar_behavior: 1
+sidebar_behavior: 2
 # Hide sidebar on all article page to let article take full width to improve reading, and
 # enjoy wide images and cover images. (true: enable, false: disable)
 clear_reading: true
@@ -178,7 +178,7 @@ tag_pagination: true
 # You can't use Disqus and Duoshuo together
 # then fill the right shortname
 # Your Disqus shortname
-disqus_shortname:
+disqus_shortname: arone-me
 # Your Duoshuo shortname
 duoshuo_shortname:
 # Your Google analystics web property ID : UA-XXXXX-X
@@ -201,12 +201,12 @@ sharing_options:
     facebook:
         icon: "fa-facebook-official"
         url: "https://www.facebook.com/sharer/sharer.php?u={{post.permalink}}"
-    twitter:
-        icon: "fa-twitter"
-        url: "https://twitter.com/intent/tweet?text={{post.permalink}}"
-    google_plus:
-        icon: "fa-google-plus"
-        url: "https://plus.google.com/share?url={{post.permalink}}"
+    # twitter:
+    #     icon: "fa-twitter"
+    #     url: "https://twitter.com/intent/tweet?text={{post.permalink}}"
+    # google_plus:
+    #     icon: "fa-google-plus"
+    #     url: "https://plus.google.com/share?url={{post.permalink}}"
     # Asian social networks
     weibo:
         title: "Weibo"
