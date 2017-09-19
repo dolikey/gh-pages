@@ -193,21 +193,21 @@
             </div>
             
                 <div class="postShorten-content" itemprop="articleBody">
-                    <p>jshint  静态代码检测工具</p>
+                    <h2>jshint  静态代码检测工具</h2>
+
 <blockquote>
 <p>参考地址：<a href="http://jshint.com/docs/" target="_blank" rel="external">http://jshint.com/docs/</a></p>
 </blockquote>
-<p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install jshint -g</div></pre></td></tr></table></figure>
-<p>项目中有可能用到的文件：</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install jshint -g</div></pre></td></tr></table></figure>
+<h3>项目中有可能用到的文件：</h3>
+
 <ul>
 <li>.jshintrc jshint配置文件／或者用–config命令指定一个.json文件</li>
 <li>.jshintignore jshint不忽略检测的文件 ／ 或者用 –exclude-path命令指定一个.gitignore</li>
 <li>reporter.js 自定义的jshint的输出方法，具体可参考本文的 <a href="#reporter">附件:reporter</a></li>
 </ul>
-<p>使用</p>
-<p>####ide拓展<br>主流的ide都有自己的拓展插件，这里用vscode简单的说明。<br>在vscode左侧的应用商店搜索jshint排第一个就是。配合项目中的.jshintrc文件可以在ide中报错。</p>
-<p>####jshint CLI<br>jshint自带命令行</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="ide拓展"><a href="#ide拓展" class="headerlink" title="ide拓展"></a>ide拓展</h4><p>主流的ide都有自己的拓展插件，这里用vscode简单的说明。<br>在vscode左侧的应用商店搜索jshint排第一个就是。配合项目中的.jshintrc文件可以在ide中报错。</p>
+<h4 id="jshint-CLI"><a href="#jshint-CLI" class="headerlink" title="jshint CLI"></a>jshint CLI</h4><p>jshint自带命令行</p>
 <table>
 <thead>
 <tr>
@@ -254,23 +254,24 @@
 </tr>
 <tr>
 <td>…</td>
+<td>…</td>
 </tr>
 </tbody>
 </table>
-<p>#####屏蔽某些错误提示</p>
-<p>jshint提供了option选项去根据不同的项目需求和程序员习惯开启或屏蔽一些错误或警告提示。但是还是有些提示并不能通过配置去掉。（这有点烦人。。）这时可以用：</p>
+<h5 id="屏蔽某些错误提示"><a href="#屏蔽某些错误提示" class="headerlink" title="屏蔽某些错误提示"></a>屏蔽某些错误提示</h5><p>jshint提供了option选项去根据不同的项目需求和程序员习惯开启或屏蔽一些错误或警告提示。但是还是有些提示并不能通过配置去掉。（这有点烦人。。）这时可以用：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* jshint -W034 */</div></pre></td></tr></table></figure>
 <p>去除对应的警告。这个W034就是错误码。具体怎么得到：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jshint --verbose myfile.js</div><div class="line">myfile.js: line 6, col 3, Unnecessary directive &quot;use strict&quot;. (W034)</div></pre></td></tr></table></figure>
 <p>或者有些ide的提示也会直接提示你错误码。（note： 一般警告的错误码会以W开头，错误的错误码会以E开头）<br>如果你想重新启动被屏蔽的错误那就用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* jshint +W034 */</div></pre></td></tr></table></figure>
-<p>##配置方法<br>按照顺序依次查找以下的config配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">[rectangle</span> <span class="attr">setX:</span> <span class="number">10</span> <span class="attr">y:</span> <span class="number">10</span> <span class="attr">width:</span> <span class="number">20</span> <span class="attr">height:</span> <span class="number">20</span><span class="string">];</span></div></pre></td></tr></table></figure>
+<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><p>按照顺序依次查找以下的config配置：</p>
 <ul>
 <li>通过jshint –config  ..path/myconfig.json指定config</li>
 <li>在package.json里增加一个jshintConfig属性，在属性里配置参数。</li>
 <li>在项目根目录添加一个.jshintrc的json配置文件，jshint运行是会从代码文件目录往上寻找直到找到.jshintrc文件。都找不到会在全局的默认配置里找.jshintrc文件。</li>
 </ul>
-<p>##Inline configuration<br>除了以上三种方法jshint还支持行内配置。<br>类似这样，在文件或函数开头加入：</p>
+<h2 id="Inline-configuration"><a href="#Inline-configuration" class="headerlink" title="Inline configuration"></a>Inline configuration</h2><p>除了以上三种方法jshint还支持行内配置。<br>类似这样，在文件或函数开头加入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/* jshint undef: true, unused: true */</div><div class="line">/* globals MY_GLOBAL */</div></pre></td></tr></table></figure>
 <p>行内配置有以下几种方式：</p>
 <p><strong>jshint开头，多个选项以逗号分开</strong></p>
@@ -283,8 +284,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// Code here will be linted with JSHint.</div><div class="line">/* jshint ignore:start */</div><div class="line">// Code here will be ignored by JSHint.</div><div class="line">/* jshint ignore:end */</div></pre></td></tr></table></figure>
 <p><strong>falls through, 避免Switch statements 没有break报错</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">switch (cond) &#123;</div><div class="line">    case &quot;one&quot;:</div><div class="line">        doSomething(); // JSHint will warn about missing &apos;break&apos; here.</div><div class="line">        /* falls through */</div><div class="line">    case &quot;two&quot;:</div><div class="line">        doSomethingElse();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>##jshintrc参数</p>
-<blockquote>
+<h2 id="jshintrc参数"><a href="#jshintrc参数" class="headerlink" title="jshintrc参数"></a>jshintrc参数</h2><blockquote>
 <p>参考<a href="http://jshint.com/docs/options/" target="_blank" rel="external">http://jshint.com/docs/options/</a></p>
 </blockquote>
 <p>具体的参数可以参考上面的官方文档。这里不做多介绍。</p>
@@ -294,8 +294,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;extends&quot;: &quot;../.jshintrc&quot;,</div><div class="line">  &quot;globals&quot;: &#123;</div><div class="line">    &quot;test&quot;: false,</div><div class="line">    &quot;assert&quot;: false</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//在一些情况下你可能想要在项目配置之外加载一些已有的配置</div></pre></td></tr></table></figure>
 <p><strong>overrides</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;shadow&quot;: false,</div><div class="line">  &quot;overrides&quot;: &#123;</div><div class="line">    &quot;lib/*-test.js&quot;: &#123;</div><div class="line">      &quot;expr&quot;: true</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//在不同的文件中应用不同的配置</div></pre></td></tr></table></figure>
-<p>##附件</p>
-<p></p><h3 id="reporter">reporters</h3><br>JSHint Reporter.js是一个你自定义的代替jshint默认输出方法的文件。<br>用jshint命令可以执行你的reporter<p></p>
+<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><h3 id="reporter">reporters</h3>
+
+<p>JSHint Reporter.js是一个你自定义的代替jshint默认输出方法的文件。<br>用jshint命令可以执行你的reporter</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jshint --reporter=myreporter.js myfile.js</div></pre></td></tr></table></figure>
 <p>下面是一个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&quot;use strict&quot;;</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line">  reporter: function (res) &#123;</div><div class="line">    var len = res.length;</div><div class="line">    var str = &quot;&quot;;</div><div class="line"></div><div class="line">    res.forEach(function (r) &#123;</div><div class="line">      var file = r.file;</div><div class="line">      var err = r.error;</div><div class="line"></div><div class="line">      str += file + &quot;: line &quot; + err.line + &quot;, col &quot; +</div><div class="line">        err.character + &quot;, &quot; + err.reason + &quot;\n&quot;;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    if (str) &#123;</div><div class="line">      process.stdout.write(str + &quot;\n&quot; + len + &quot; error&quot; +</div><div class="line">        ((len === 1) ? &quot;&quot; : &quot;s&quot;) + &quot;\n&quot;);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
@@ -457,5 +458,24 @@
 <!--SCRIPTS END-->
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script>
+        var algoliaClient = algoliasearch('AX6BXDJKLY', '2880b1ba7c27e2da2239a6bc116908ee');
+        var algoliaIndex = algoliaClient.initIndex('hexo');
+    </script>
+
+
+<script type="text/javascript">
+    !function(q,g,r,a,p,h,js){
+    if(q.qg)return;
+    js = q.qg = function() {
+        js.callmethod ? js.callmethod.call(js, arguments) : js.queue.push(arguments);
+    };
+    js.queue = [];
+    p=g.createElement(r);p.async=!0;p.src=a;h=g.getElementsByTagName(r)[0];
+    h.parentNode.insertBefore(p,h);
+    }(window,document,'script','//cdn.qgr.ph/qgraph.dea090079a5bc9b842fd.js');
+</script>
     </body>
 </html>

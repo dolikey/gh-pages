@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="愿世界和平">
 <meta property="og:description" content="这是一个测试的blog站点">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-06T10:02:34.000Z">
+<meta property="og:updated_time" content="2017-09-14T09:40:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="all-archives">
 <meta name="twitter:description" content="这是一个测试的blog站点">
@@ -186,7 +186,7 @@
                 
                 <ul class="archive-posts archive-month" data-date="201708">
                     <h5 class="archive-title">
-                        <a class="link-unstyled" href="/archives/2017/08">八月</a>
+                        <a class="link-unstyled" href="/archives/2017/08">August</a>
                     </h5>
                 
             
@@ -334,5 +334,24 @@
 <!--SCRIPTS END-->
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script>
+        var algoliaClient = algoliasearch('AX6BXDJKLY', '2880b1ba7c27e2da2239a6bc116908ee');
+        var algoliaIndex = algoliaClient.initIndex('hexo');
+    </script>
+
+
+<script type="text/javascript">
+    !function(q,g,r,a,p,h,js){
+    if(q.qg)return;
+    js = q.qg = function() {
+        js.callmethod ? js.callmethod.call(js, arguments) : js.queue.push(arguments);
+    };
+    js.queue = [];
+    p=g.createElement(r);p.async=!0;p.src=a;h=g.getElementsByTagName(r)[0];
+    h.parentNode.insertBefore(p,h);
+    }(window,document,'script','//cdn.qgr.ph/qgraph.dea090079a5bc9b842fd.js');
+</script>
     </body>
 </html>

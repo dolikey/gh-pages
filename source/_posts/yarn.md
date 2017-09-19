@@ -11,7 +11,7 @@ tags:
 ---
 >[yarn](https://github.com/yarnpkg/yarn) - https://github.com/yarnpkg/yarn
 
-一、为什么需要yarn
+## 一、为什么需要yarn
    作为一个前端，说到包管理首先想到的可能是node里的npm。至今为止，它可以访问在npm注册的 300,000 多个安装包。超出500万的工程师使用npm注册，每个月的下载量高达 50 亿。
 但是随着npm的普遍过程中，有一些问题也随之暴露出来：
 
@@ -21,7 +21,7 @@ tags:
 4. node_modules里的依赖有很多重复的，即占用了硬盘资源，又拉长了拉取的时间和网络资源。
 所以yarn诞生了。
 
-二、yarn简介
+## 二、yarn简介
 facebook于 2016-10-12 开源的javascript包管理工具 Yarn，开源三天star数就超过了npm。Yarn 作为一个新的包管理器，用于替代现有的 npm 客户端或者其他兼容 npm 仓库的包管理工具。Yarn 保留了现有工作流的特性，优点是更快、更安全、更可靠。
 
 >新的特性：
@@ -34,7 +34,7 @@ facebook于 2016-10-12 开源的javascript包管理工具 Yarn，开源三天sta
 
 总结一下就是：兼容npm、缓存和离线下载、yarn.lock锁定版本与安装顺序
 
-三、yarn的使用
+## 三、yarn的使用
 安装
 **macOS**
 官方推荐的是homebrew：```brew install yarn```
@@ -56,7 +56,7 @@ npm uninstall xxx —save | yarn remove xxx |
 npm update |  yarn upgrade | yarn upgrade [package]@[version]
 npm install xxx -g | yarn global add xxx |
 
-结尾
+<h3>结尾</h3>
 如果你只是想本地改一下依赖就用npm好了，yarn每次更改好像都会更改.lock文件。如果并不想锁定版本用npm也是一种可接受方案。
 
 

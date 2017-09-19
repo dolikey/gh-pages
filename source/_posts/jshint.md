@@ -7,27 +7,27 @@ tags:
 - js
 - jshint
 ---
-jshint  静态代码检测工具
+<h2>jshint  静态代码检测工具</h2>
 
 >参考地址：[http://jshint.com/docs/](http://jshint.com/docs/)
 
-安装
+## 安装
 
 ```
 npm install jshint -g
 ```
-项目中有可能用到的文件：
+<h3>项目中有可能用到的文件：</h3>
 
 * .jshintrc jshint配置文件／或者用--config命令指定一个.json文件
 * .jshintignore jshint不忽略检测的文件 ／ 或者用 --exclude-path命令指定一个.gitignore
 * reporter.js 自定义的jshint的输出方法，具体可参考本文的 [附件:reporter](#reporter)
 
-使用
-##ide拓展
+### 使用
+#### ide拓展
 主流的ide都有自己的拓展插件，这里用vscode简单的说明。
 在vscode左侧的应用商店搜索jshint排第一个就是。配合项目中的.jshintrc文件可以在ide中报错。
 
-####jshint CLI
+#### jshint CLI
 jshint自带命令行
 
 | 例子 |  解释 |
@@ -41,9 +41,9 @@ jshint自带命令行
 | --prereq | 指定全局变量 |
 | jshint --help | 帮助 |
 | jshint --version | 版本 |
-| ... ||
+| ... | ...|
 
-#####屏蔽某些错误提示
+##### 屏蔽某些错误提示
 
 jshint提供了option选项去根据不同的项目需求和程序员习惯开启或屏蔽一些错误或警告提示。但是还是有些提示并不能通过配置去掉。（这有点烦人。。）这时可以用：
     
@@ -63,16 +63,18 @@ myfile.js: line 6, col 3, Unnecessary directive "use strict". (W034)
 /* jshint +W034 */
 ```
 
+{% codeblock lang:yaml %}
+[rectangle setX: 10 y: 10 width: 20 height: 20];
+{% endcodeblock %}
 
-
-##配置方法
+## 配置方法
 按照顺序依次查找以下的config配置：
 
 * 通过jshint --config  ..path/myconfig.json指定config
 * 在package.json里增加一个jshintConfig属性，在属性里配置参数。
 * 在项目根目录添加一个.jshintrc的json配置文件，jshint运行是会从代码文件目录往上寻找直到找到.jshintrc文件。都找不到会在全局的默认配置里找.jshintrc文件。
 
-##Inline configuration
+## Inline configuration
 除了以上三种方法jshint还支持行内配置。
 类似这样，在文件或函数开头加入：
 
@@ -118,7 +120,7 @@ switch (cond) {
 }
 ```
 
-##jshintrc参数
+## jshintrc参数
 >参考[http://jshint.com/docs/options/](http://jshint.com/docs/options/)
 
 具体的参数可以参考上面的官方文档。这里不做多介绍。
@@ -206,6 +208,7 @@ switch (cond) {
 }
 //在一些情况下你可能想要在项目配置之外加载一些已有的配置
 ```
+
 **overrides**
 
 ```
@@ -220,8 +223,10 @@ switch (cond) {
 //在不同的文件中应用不同的配置
 ```
 
-##附件
+## 附件
+
 <h3 id="reporter">reporters</h3>
+
 JSHint Reporter.js是一个你自定义的代替jshint默认输出方法的文件。
 用jshint命令可以执行你的reporter
 
