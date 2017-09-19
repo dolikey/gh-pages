@@ -1,0 +1,44 @@
+[
+    {
+        "title": "yarn",
+        "date": "2017-08-31 18:43:24",
+        "permalink": "/2017/08/31/yarn/",
+        "excerpt": "作为一个前端，说到包管理首先想到的可能是node里的npm。至今为止，它可以访问在npm注册的 300,000 多个安装包。超出500万的工程师使用npm注册，每个月的下载量高达 50 亿。",
+        "rating": 100,
+        "image_path": "",
+        "alternative_name": "javascript",
+        "_rankingInfo": {
+            "nbTypos": 0,
+            "firstMatchedWord": 1,
+            "proximityDistance": 0,
+            "userScore": 1,
+            "geoDistance": 0,
+            "geoPrecision": 0,
+            "nbExactWords": 0,
+            "words": 0,
+            "filters": 0
+        },
+        "objectID": "2"
+    },
+    {
+        "title": "jshint",
+        "date": "2017-08-31 15:47:28",
+        "permalink": "/2017/08/31/jshint/",
+        "excerpt": "jshint  静态代码检测工具",
+        "rating": 100,
+        "image_path": "",
+        "alternative_name": "javascript",
+        "_rankingInfo": {
+            "nbTypos": 0,
+            "firstMatchedWord": 0,
+            "proximityDistance": 0,
+            "userScore": 0,
+            "geoDistance": 0,
+            "geoPrecision": 0,
+            "nbExactWords": 0,
+            "words": 0,
+            "filters": 0
+        },
+        "objectID": "1"
+    }
+]
