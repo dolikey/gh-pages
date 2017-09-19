@@ -71,6 +71,24 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+plugins:
+  - hexo-algoliasearch
+
+algolia:
+  appId: "AX6BXDJKLY"
+  apiKey: "2880b1ba7c27e2da2239a6bc116908ee"
+  adminApiKey: "8dd7362ebf75de5fd5f6d0854981fcb1"
+  chunkSize: 5000
+  indexName: "hexo"
+  fields:
+    - title
+    - tags
+    - slug
+    - excerpt
+    - excerpt:strip
+    - photos
+    - gallery
+
 ## Themes: https://hexo.io/themes/
 theme: tranquilpeak
 
