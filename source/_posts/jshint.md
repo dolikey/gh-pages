@@ -23,7 +23,7 @@ npm install jshint -g
 * reporter.js 自定义的jshint的输出方法，具体可参考本文的 [附件:reporter](#reporter)
 
 使用
-####ide拓展
+##ide拓展
 主流的ide都有自己的拓展插件，这里用vscode简单的说明。
 在vscode左侧的应用商店搜索jshint排第一个就是。配合项目中的.jshintrc文件可以在ide中报错。
 
