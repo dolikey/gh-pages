@@ -18,7 +18,7 @@ npm install jshint -g
 ```
 ### 项目中有可能用到的文件：
 
-* .jshintrc jshint配置文件／或者用--config命令指定一个.json文件
+* .jshintrc jshint配置文件／或者用--config命令 指定一个.json文件
 * .jshintignore jshint不忽略检测的文件 ／ 或者用 --exclude-path命令指定一个.gitignore
 * reporter.js 自定义的jshint的输出方法，具体可参考本文的 [附件:reporter](#reporter)
 
