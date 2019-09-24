@@ -1,0 +1,16 @@
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Hexo version: \u001b[35m3.3.9\u001b[39m","time":"2019-09-24T14:25:43.685Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Working directory: \u001b[35m~/project/blog/githubBlog/\u001b[39m","time":"2019-09-24T14:25:43.686Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Config loaded: \u001b[35m~/project/blog/githubBlog/_config.yml\u001b[39m","time":"2019-09-24T14:25:43.740Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-algoliasearch\u001b[39m","time":"2019-09-24T14:25:43.744Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/button.js\u001b[39m","time":"2019-09-24T14:25:43.748Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/center-quote.js\u001b[39m","time":"2019-09-24T14:25:43.748Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/full-image.js\u001b[39m","time":"2019-09-24T14:25:43.748Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/exturl.js\u001b[39m","time":"2019-09-24T14:25:43.749Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/group-pictures.js\u001b[39m","time":"2019-09-24T14:25:43.749Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/lazy-image.js\u001b[39m","time":"2019-09-24T14:25:43.749Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/merge-configs.js\u001b[39m","time":"2019-09-24T14:25:43.751Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/note.js\u001b[39m","time":"2019-09-24T14:25:43.752Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/label.js\u001b[39m","time":"2019-09-24T14:25:43.752Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/tabs.js\u001b[39m","time":"2019-09-24T14:25:43.752Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/merge.js\u001b[39m","time":"2019-09-24T14:25:43.768Z","v":0}
+{"name":"hexo","hostname":"arone-2.local","pid":67104,"level":20,"msg":"Database saved","time":"2019-09-24T14:25:43.773Z","v":0}

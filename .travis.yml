@@ -11,7 +11,7 @@ before_script:
 script:
   - hexo -v
   - hexo g
-  
+
 deploy:
   provider: pages
   local_dir: public
