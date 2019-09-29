@@ -3,10 +3,10 @@ node_js:
   - "10"
 before_script:
   - npm install hexo-cli -g
-  - cd themes/tranquilpeak
+  # - cd themes/tranquilpeak
   - npm install
-  - bower install
-  - cd ../..
+  # - bower install
+  # - cd ../..
   -
 script:
   - hexo -v
