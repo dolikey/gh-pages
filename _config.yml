@@ -4,10 +4,10 @@
 
 # Site
 title: 愿世界和平
-subtitle: test
-description: 这是一个测试的blog站点
-author: arone
-language: zh-cn
+subtitle: 平平无奇的个人站
+description: 记录生活，记录成长，前端猫一只。
+author: 叶子
+language: zh-Hans
 timezone:
 
 # URL
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -42,7 +42,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -51,7 +51,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -71,23 +71,59 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-plugins:
-  - hexo-algoliasearch
+# plugins:
+#   - hexo-algoliasearch
 
-algolia:
-  appId: "AX6BXDJKLY"
-  apiKey: "2880b1ba7c27e2da2239a6bc116908ee"
-  adminApiKey: "8dd7362ebf75de5fd5f6d0854981fcb1"
-  chunkSize: 5000
-  indexName: "hexo"
-  fields:
-    - title
-    - tags
-    - slug
-    - excerpt
-    - excerpt:strip
-    - photos
-    - gallery
+# algolia:
+#   appId: "AX6BXDJKLY"
+#   apiKey: "2880b1ba7c27e2da2239a6bc116908ee"
+#   adminApiKey: "8dd7362ebf75de5fd5f6d0854981fcb1"
+#   chunkSize: 5000
+#   indexName: "hexo"
+#   fields:
+#     - title
+#     - tags
+#     - slug
+#     - excerpt
+#     - excerpt:strip
+#     - photos
+#     - gallery
+
+# third part plugin
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: kesyoban
+  display:
+    superSample: 2
+    width: 300
+    height: 360
+    position: left
+    hOffset: -10
+    vOffset: -50
+  mobile:
+    show: false
+  react:
+    opacityDefault: 1
+    opacityOnHover: 0.5
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
 
 ## Themes: https://hexo.io/themes/
 theme: next
