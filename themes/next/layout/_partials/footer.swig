@@ -40,6 +40,13 @@
 #}</div>
 {% endif %}
 
+{% if config.create_time %}
+<div class="exist-time">
+    <span id="timeDate">载入天数...</span>
+    <span id="times">载入时分秒...</span>
+</div>
+{% endif %}
+
 {% if theme.footer.custom_text %}
   <div class="footer-custom">{#
   #}{{ theme.footer.custom_text }}{#

@@ -21,7 +21,7 @@ npm install jshint -g
 * .jshintrc jshint配置文件／或者用--config命令 指定一个.json文件
 * .jshintignore jshint不忽略检测的文件 ／ 或者用 --exclude-path命令指定一个.gitignore
 * reporter.js 自定义的jshint的输出方法，具体可参考本文的 [附件:reporter](#reporter)
-
+<!-- more -->
 ### 使用
 #### ide拓展
 主流的ide都有自己的拓展插件，这里用vscode简单的说明。
