@@ -380,7 +380,7 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: true
+  enable: false
   post_show: false
   appid:  qyqVlKyiOONjqx22DVoc6cr6-gzGzoHsz # your leancloud application appid
   appkey:  0rK5FJ7Ga1kTFpkM51OFbXrp # your leancloud application appkey
@@ -699,7 +699,7 @@ pace: true
 pace_theme: pace-theme-flash
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
 three_waves: false

@@ -58,12 +58,13 @@ sudo yum install yarn
 and so on...
 
 简单指令
-npm|yarn|注释
----|---|---
+
+npm | yarn | 注释
+--- | --- | ---
 npm init | yarn init |
 npm install | yarn / yarn install |
 npm install xxx —save | yarn add xxx |  yarn add [package]@[version]
-npm uninstall xxx —save | yarn remove xxx | 
+npm uninstall xxx —save | yarn remove xxx |
 npm update |  yarn upgrade | yarn upgrade [package]@[version]
 npm install xxx -g | yarn global add xxx |
 
