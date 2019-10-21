@@ -4,6 +4,10 @@
   "hexo": {
     "version": "3.9.0"
   },
+  "scripts": {
+      "serve": "hexo s",
+      "new": "hexo new title"
+  },
   "dependencies": {
     "hexo": "^3.9.0",
     "hexo-generator-archive": "^0.1.5",
