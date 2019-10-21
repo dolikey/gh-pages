@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>愿世界和平</title>
+  <icon>http://arone.me/icon.png</icon>
+  <subtitle>平平无奇的个人站</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://arone.me/"/>
+  <updated>2019-10-21T10:30:45.297Z</updated>
+  <id>http://arone.me/</id>
+  
+  <author>
+    <name>叶子</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx</title>
+    <link href="http://arone.me/2019/10/21/nginx/"/>
+    <id>http://arone.me/2019/10/21/nginx/</id>
+    <published>2019-10-21T18:23:47.000Z</published>
+    <updated>2019-10-21T10:30:45.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;Nginx是俄罗斯人用c++编写的十分轻量级的HTTP服务器，同时也能作为邮件服务器、反向代理服务器、静态资源服务器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="server" scheme="http://arone.me/categories/server/"/>
+    
+    
+      <category term="nginx" scheme="http://arone.me/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浮点数计算中的精度丢失</title>
+    <link href="http://arone.me/2019/10/21/precision/"/>
+    <id>http://arone.me/2019/10/21/precision/</id>
+    <published>2019-10-21T18:17:15.000Z</published>
+    <updated>2019-10-21T10:30:45.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-js浮点数运算精度丢失&quot;&gt;&lt;a href=&quot;#1-js浮点数运算精度丢失&quot; class=&quot;headerlink&quot; title=&quot;1  js浮点数运算精度丢失&quot;&gt;&lt;/a&gt;1 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://arone.me/categories/javascript/"/>
+    
+    
+      <category term="js" scheme="http://arone.me/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>eslint 静态代码检测工具</title>
+    <link href="http://arone.me/2019/10/21/eslint/"/>
+    <id>http://arone.me/2019/10/21/eslint/</id>
+    <published>2019-10-21T18:11:56.000Z</published>
+    <updated>2019-10-21T10:30:45.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;ESLint最初是由Nicholas C. Zakas
+        
+      
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://arone.me/categories/javascript/"/>
+    
+    
+      <category term="js" scheme="http://arone.me/tags/js/"/>
+    
+      <category term="eshint" scheme="http://arone.me/tags/eshint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>grid 删格布局</title>
+    <link href="http://arone.me/2019/10/21/grid/"/>
+    <id>http://arone.me/2019/10/21/grid/</id>
+    <published>2019-10-21T16:54:44.000Z</published>
+    <updated>2019-10-21T10:30:45.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt; - &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="css" scheme="http://arone.me/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://arone.me/tags/css/"/>
+    
+      <category term="layout" scheme="http://arone.me/tags/layout/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jshint</title>
+    <link href="http://arone.me/2017/08/31/jshint/"/>
+    <id>http://arone.me/2017/08/31/jshint/</id>
+    <published>2017-08-31T18:43:24.000Z</published>
+    <updated>2019-10-21T10:30:45.297Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2&gt;jshint  静态代码检测工具&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;参考地址：&lt;a href=&quot;http://jshint.com/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://jshint.com/docs/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install jshint -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;项目中有可能用到的文件：&quot;&gt;&lt;a href=&quot;#项目中有可能用到的文件：&quot; class=&quot;headerlink&quot; title=&quot;项目中有可能用到的文件：&quot;&gt;&lt;/a&gt;项目中有可能用到的文件：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;.jshintrc jshint配置文件／或者用–config命令 指定一个.json文件&lt;/li&gt;
+&lt;li&gt;.jshintignore jshint不忽略检测的文件 ／ 或者用 –exclude-path命令指定一个.gitignore&lt;/li&gt;
+&lt;li&gt;reporter.js 自定义的jshint的输出方法，具体可参考本文的 &lt;a href=&quot;#reporter&quot;&gt;附件:reporter&lt;/a&gt;
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://arone.me/categories/javascript/"/>
+    
+    
+      <category term="js" scheme="http://arone.me/tags/js/"/>
+    
+      <category term="jshint" scheme="http://arone.me/tags/jshint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yarn介绍</title>
+    <link href="http://arone.me/2017/08/31/yarn/"/>
+    <id>http://arone.me/2017/08/31/yarn/</id>
+    <published>2017-08-31T15:47:28.000Z</published>
+    <updated>2019-10-21T10:30:45.297Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/yarnpkg/yarn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;yarn&lt;/a&gt; - &lt;a href=&quot;https://github.com/yarnpkg/yarn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/yarnpkg/yarn&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;一、为什么需要yarn&quot;&gt;&lt;a href=&quot;#一、为什么需要yarn&quot; class=&quot;headerlink&quot; title=&quot;一、为什么需要yarn&quot;&gt;&lt;/a&gt;一、为什么需要yarn&lt;/h2&gt;&lt;p&gt;   作为一个前端，说到包管理首先想到的可能是node里的npm。至今为止，它可以访问在npm注册的 300,000 多个安装包。超出500万的工程师使用npm注册，每个月的下载量高达 50 亿
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://arone.me/categories/javascript/"/>
+    
+    
+      <category term="js" scheme="http://arone.me/tags/js/"/>
+    
+      <category term="node" scheme="http://arone.me/tags/node/"/>
+    
+      <category term="npm" scheme="http://arone.me/tags/npm/"/>
+    
+      <category term="yarn" scheme="http://arone.me/tags/yarn/"/>
+    
+  </entry>
+  
+</feed>
